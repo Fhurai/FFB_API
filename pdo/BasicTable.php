@@ -203,7 +203,7 @@ abstract class BasicTable extends Connection
                     if (is_numeric($value) && is_string($field))
                         $query .= " " . strval($field) . "=" . $value;
                     else
-                        $query .= " " . strval($field) . " LIKE '%" . $value . "%'";
+                        $query .= " " . strval($field) . " LIKE '%" . addslashes($value) . "%'";
                 }
             }
 
@@ -436,6 +436,8 @@ abstract class BasicTable extends Connection
                 if ($ownTransaction)
                     $this->getConnection()->rollBack();
             }
+            var_dump($entity);
+            die();
         }
         return false;
 

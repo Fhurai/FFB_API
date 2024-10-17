@@ -55,6 +55,7 @@ $B2 = $table->update($fandomB);
 $B3 = $table->delete($fandomB);
 $B4 = $table->restore($fandomB);
 $B5 = $table->remove($fandomB);
+
 /**
  * * * * * * * * * * * * * * *
  * * * * Active Fandom * * * *
@@ -81,6 +82,7 @@ $C4 = $table->restore($fandomC);
 $C5 = $table->remove($fandomC);
 $C6 = $table->delete($fandomC);
 $C7 = $table->remove($fandomC);
+
 /**
  * * * * * * * * * * * * * * *
  * * * * Inactive Fandom * * * 
@@ -108,7 +110,7 @@ $D5 = $table->delete($fandomD);
 $D6 = $table->remove($fandomD);
 
 $results = [
-    // // Get from DB
+    // Get from DB
     "A01" => $A01->getName() === "Naruto",
     "A02" => $A02["name"] === "Nana to Kaoru | ナナとカオル",
     "A03" => count($A03) === 15 && is_object($A03[0]),
@@ -120,7 +122,7 @@ $results = [
     "A09" => count($A09) === 1 && is_object($A09[0]) && $A09[0]->getName() === "Xenoblade Chronicles 3",
     "A10" => count($A10) === 1 && is_array($A10[0]) && count($A10[0]) == 2 && $A10[0]["name"] === "Xenoblade Chronicles 2",
     "A11" => count($A11) === 15 && is_object($A11[0]),
-    // // Empty fandom
+    // Empty fandom
     "B1" => $B1 === false,
     "B2" => $B2 === false,
     "B3" => $B3 === false,
