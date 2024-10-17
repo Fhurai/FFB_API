@@ -20,6 +20,10 @@ ol a.success li {
     background-color: darkgreen;
 }
 
+ol a.fail li {
+    background-color: brown;
+}
+
 a,
 a:visited,
 a:link {
