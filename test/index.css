@@ -1,0 +1,58 @@
+html,
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: whitesmoke;
+}
+
+ol {
+    width: 20rem;
+    margin: 2rem auto;
+    border: 1px solid darkgray;
+    border-radius: 0.5rem 0 0.5rem 0.5rem;
+}
+
+ol li {
+    padding: 0.5rem;
+}
+
+ol a.success li {
+    background-color: darkgreen;
+}
+
+a,
+a:visited,
+a:link {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.pourcentage {
+    padding: 0.5rem;
+    border: 0.25rem solid whitesmoke;
+    border-radius: 0.5rem;
+    width: 20rem;
+    margin: 0 auto;
+    display: grid;
+}
+
+.pourcentage>* {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.pourcentage div {
+    padding: 1rem;
+    background-color: brown;
+    width: 90%;
+    border-radius: 0.25rem;
+    z-index: 10;
+}
+
+.pourcentage div.result {
+    padding: 1rem;
+    background-color: green;
+    border-radius: 0.25rem;
+    z-index: 20;
+    text-align: center;
+}

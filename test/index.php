@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index test folders</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
+    <div class="pourcentage">
+        <div></div>
+    </div>
     <ol>
         <a href="testFandom.php"><li>Fandom</li></a>
         <a href="testAuthor.php"><li>Author</li></a>
@@ -25,5 +29,5 @@
         <a href="testUser.php"><li>User</li></a>
     </ol>
 </body>
-
+<script src="./index.js"></script>
 </html>
