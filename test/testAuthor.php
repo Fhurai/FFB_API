@@ -20,9 +20,9 @@ $table = new AuthorTable("test_fanbk");
  * A03 - getAll() with all fields and all entities                                      - yes
  * A04 - getAll() with selected fields in array                                         - yes
  * A05 - getAll() with selected fields in string                                        - yes
- * A06 - getAll() with limits (2,2 begins to 3 & go to 5)                              - yes
+ * A06 - getAll() with limits (2,2 begins to 3 & go to 4)                               - yes
  * A07 - getSearch() with name                                                          - yes
- * A08 - getSearch() with date only update_date & limits (0,4 begins to 1 &  go to 14) - yes
+ * A08 - getSearch() with date only update_date & limits (0,5 begins to 1 &  go to 4)   - yes
  * A09 - getSearch() with time only update_date                                         - yes
  * A10 - getSearch() with complete update_date with selected fields in array            - yes
  * A11 - getSearch() with null search                                                   - yes
@@ -41,7 +41,7 @@ $A11 = $table->getSearch(["search" => null]);
 
 /**
  * * * * * * * * * * * * * *
- * * * * Empty Fandom* * * * 
+ * * * * Empty Author* * * * 
  * * * * * * * * * * * * * *
  * B1 - Create  - no
  * B2 - Update  - no
@@ -58,7 +58,7 @@ $B5 = $table->remove($authorB);
 
 /**
  * * * * * * * * * * * * * * *
- * * * * Active Fandom * * * *
+ * * * * Active Author * * * *
  * * * * * * * * * * * * * * *
  * C1 - Create  - yes
  * C2 - Update  - yes
@@ -85,7 +85,7 @@ $C7 = $table->remove($authorC);
 
 /**
  * * * * * * * * * * * * * * *
- * * * * Inactive Fandom * * * 
+ * * * * Inactive Author * * * 
  * * * * * * * * * * * * * * *
  * D1 - Create  - yes
  * D2 - Update  - no
@@ -95,7 +95,7 @@ $C7 = $table->remove($authorC);
  * D6 - Remove  - yes 
  */
 $authorD = new Author([
-    "name"=> "Me413",
+    "name" => "Me413",
     "creation_date" => "2024-10-17 11:00:00",
     "update_date" => "2024-10-17 11:15:00",
     "suppression_date" => "2024-10-17 11:15:00",
