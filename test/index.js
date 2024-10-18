@@ -24,12 +24,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
             keys += authors[1];
             drawPourcentage();
         });
+
+    // Stats languages.
+    languages()
+        .then((languages) => {
+            values += languages[0];
+            keys += languages[1];
+            drawPourcentage();
+        });
+
+    tags()
+        .then((tags) => {
+            values += tags[0];
+            keys += tags[1];
+            drawPourcentage();
+        });
 });
 
 /**
  * Draw pourcentage bar from numbers got from all tests.
  */
 function drawPourcentage() {
+    document.querySelectorAll(".result").forEach((div) => {div.remove()});
     const pourcentageBar = document.createElement("div");
     pourcentageBar.classList = "result";
     pourcentageBar.innerHTML = Math.round(values / keys * 100) + "%";
@@ -52,6 +68,24 @@ async function fandoms() {
  */
 async function authors() {
     const url = "testAuthor.php";
+    return fetchTests(url);
+}
+
+/**
+ * Gets the languages tests numbers.
+ * @returns [numbers of successful tests, numbers of total tests]
+ */
+async function languages() {
+    const url = "testLanguage.php";
+    return fetchTests(url);
+}
+
+/**
+ * Gets the tags tests numbers.
+ * @returns [numbers of successful tests, numbers of total tests]
+ */
+async function tags() {
+    const url = "testTag.php";
     return fetchTests(url);
 }
 
